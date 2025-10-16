@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>TSFAlex Central</title>
+  <link rel="icon" type="image/jpeg" href="TSFAlex pic.jpg" />
+  <style>
+    /* Reset + Theme */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
+      background: radial-gradient(circle at top, #0a0a0f, #030308);
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Navbar */
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background: rgba(15, 15, 25, 0.9);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 15px 50px;
+      z-index: 100;
+      backdrop-filter: blur(8px);
+    }
+
+    .logo {
+      font-weight: 700;
+      font-size: 1.4rem;
+      color: #72a4f2;
+      letter-spacing: 1px;
+    }
+
+    nav ul {
+      display: flex;
+      gap: 30px;
+    }
+
+    nav ul li {
+      list-style: none;
+    }
+
+    nav ul li a {
+      color: #c9c9c9;
+      text-decoration: none;
+      transition: 0.3s;
+    }
+
+    nav ul li a:hover {
+      color: #72a4f2;
+    }
+
+    /* Main Profile Section */
+    .main {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      padding: 120px 20px 80px 20px;
+    }
+
+    .profile-pic {
+      width: 180px;
+      height: 180px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 4px solid #72a4f2;
+      box-shadow: 0 0 20px #72a4f2;
+      margin-bottom: 20px;
+    }
+
+    .name {
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .desc {
+      font-size: 1rem;
+      color: #cfcfcf;
+      max-width: 600px;
+      line-height: 1.6;
+    }
+
+    /* Discord Section */
+    .section {
+      padding: 80px 20px;
+      text-align: center;
+    }
+
+    .section h2 {
+      font-size: 1.8rem;
+      color: #72a4f2;
+      margin-bottom: 20px;
+    }
+
+    .section p {
+      color: #cfcfcf;
+      max-width: 700px;
+      margin: 0 auto 30px auto;
+      line-height: 1.6;
+    }
+
+    .discord-btn {
+      display: inline-block;
+      background: linear-gradient(90deg, #5865f2, #4752c4);
+      color: white;
+      text-decoration: none;
+      padding: 14px 32px;
+      border-radius: 30px;
+      font-weight: 600;
+      letter-spacing: 0.5px;
+      transition: all 0.3s ease;
+      box-shadow: 0 0 12px rgba(114, 164, 242, 0.5);
+    }
+
+    .discord-btn:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(114, 164, 242, 0.8);
+    }
+
+    /* Websites Section */
+    .projects {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .card {
+      background: rgba(20, 20, 30, 0.8);
+      border-radius: 20px;
+      padding: 25px;
+      transition: 0.3s ease;
+      box-shadow: 0 0 15px rgba(114, 164, 242, 0.2);
+    }
+
+    .card:hover {
+      transform: translateY(-8px);
+      box-shadow: 0 0 25px rgba(114, 164, 242, 0.4);
+    }
+
+    .card h3 {
+      color: #72a4f2;
+      margin-bottom: 10px;
+    }
+
+    .card p {
+      font-size: 0.9rem;
+      color: #cfcfcf;
+      margin-bottom: 20px;
+    }
+
+    .card a {
+      color: white;
+      background: #72a4f2;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 30px;
+      transition: 0.3s;
+      display: inline-block;
+    }
+
+    .card a:hover {
+      background: #5c8de0;
+      transform: scale(1.05);
+    }
+
+    /* Footer */
+    footer {
+      text-align: center;
+      padding: 30px;
+      background: rgba(10, 10, 20, 0.9);
+      color: #888;
+      font-size: 0.9rem;
+      margin-top: 80px;
+      backdrop-filter: blur(6px);
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        flex-direction: column;
+        align-items: flex-start;
+      }
+
+      nav ul {
+        flex-wrap: wrap;
+        gap: 10px;
+      }
+
+      .profile-pic {
+        width: 140px;
+        height: 140px;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="logo">AC</div>
+    <ul>
+      <li><a href="#home">Home</a></li>
+      <li><a href="#discord">Discord</a></li>
+      <li><a href="#websites">Websites</a></li>
+    </ul>
+  </nav>
+
+  <!-- Main Profile Section -->
+  <section class="main" id="home">
+    <img src="TSFAlex pic.jpg" alt="Profile Picture" class="profile-pic">
+    <div class="name">TSFAlex</div>
+    <div class="desc">
+      I know how to use AI for coding well. I also play VR and PC games like <b>Beat Saber</b>, <b>Yeeps</b>, <b>UG</b>, <b>Geometry Dash</b>, <b>A Dance Of Fire And Ice</b>, and <b>Delta Force</b>.  
+      Join my Discord and check out my projects below!
+    </div>
+  </section>
+
+  <!-- Discord Section -->
+  <section class="section" id="discord">
+    <h2>Join My Discord Server</h2>
+    <p>Hang out with me and the community — talk projects, games, and coding ideas. The server is the best place to connect and get updates on new stuff I build.</p>
+    <a href="https://discord.gg/pfnmMRvPA7" target="_blank" class="discord-btn">Join Discord</a>
+  </section>
+
+  <!-- Websites Section -->
+  <section class="section" id="websites">
+    <h2>My Projects</h2>
+    <div class="projects">
+
+      <div class="card">
+        <h3>HTML Previewer</h3>
+        <p>A live HTML previewer tool for testing and visualizing web code instantly.</p>
+        <a href="https://html-previewer1.vercel.app" target="_blank">Visit</a>
+      </div>
+
+      <div class="card">
+        <h3>Code Editor Premium</h3>
+        <p>A powerful online code editor for advanced coding and collaboration.</p>
+        <a href="https://code-editor-premium.vercel.app" target="_blank">Visit</a>
+      </div>
+
+      <div class="card">
+        <h3>ALLF Studio</h3>
+        <p>An innovative file format and project management tool built by me.</p>
+        <a href="https://allf-studio.vercel.app" target="_blank">Visit</a>
+      </div>
+
+      <div class="card">
+        <h3>Advanced Calculator</h3>
+        <p>A sleek and efficient calculator app capable of handling complex equations.</p>
+        <a href="https://advanced-calculator-windows.vercel.app" target="_blank">Visit</a>
+      </div>
+
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    © TSFAlex Central - TSFAlex
+  </footer>
+
+</body>
+</html>
